@@ -1,0 +1,15 @@
+.button-main {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: var(--button-main-shadow);
+  padding: 10px 32px;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}

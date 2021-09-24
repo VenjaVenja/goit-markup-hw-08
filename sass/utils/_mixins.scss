@@ -1,0 +1,9 @@
+@mixin displayFlex($df: flex, $jc: center, $ai: center) {
+  display: $df;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin sectionPadding($pt: 94px, $pb: 94px) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}

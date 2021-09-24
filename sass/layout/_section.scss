@@ -1,0 +1,15 @@
+.section {
+  background-color: var(--primary-white-color);
+  &-titel {
+    color: var(--titel-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &-team {
+    background-color: var(--second-bg-color);
+    @include sectionPadding();
+  }
+}

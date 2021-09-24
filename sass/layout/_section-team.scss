@@ -1,0 +1,63 @@
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__card {
+    background-color: var(--primary-white-color);
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    border-radius: 4px;
+  }
+}
+
+.teammate {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &__titel {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    color: var(--titel-text-color);
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 16px;
+  }
+}
+
+.teammates-socials {
+  display: flex;
+  justify-content: center;
+  &__item {
+    width: 44px;
+    height: 44px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    @include displayFlex();
+    border-radius: 50%;
+    background-color: var(--primary-white-color);
+    fill: #afb1b8;
+    transition: background-color var(--time-duration) var(--time-function),
+      fill var(--time-duration) var(--time-function);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+    &:hover .teammates-socials__icon,
+    &:focus .teammates-socials__icon {
+      fill: var(--primary-white-color);
+    }
+  }
+  &__icon {
+    transition: fill var(--time-duration) var(--time-function);
+  }
+}
