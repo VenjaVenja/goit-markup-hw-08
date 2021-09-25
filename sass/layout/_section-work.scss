@@ -1,5 +1,10 @@
 .work {
-  @include sectionPadding($pt: 47px);
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-top: 47px;
+    padding-bottom: 94px;
+  }
 }
 
 .work-list {

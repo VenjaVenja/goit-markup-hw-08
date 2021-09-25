@@ -3,7 +3,7 @@
   justify-content: $jc;
   align-items: $ai;
 }
-@mixin sectionPadding($pt: 94px, $pb: 94px) {
+@mixin sectionPadding($pt: 60px, $pb: 60px) {
   padding-top: $pt;
   padding-bottom: $pb;
 }
