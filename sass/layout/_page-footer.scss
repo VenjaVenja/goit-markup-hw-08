@@ -7,7 +7,28 @@
 
 .main-footer {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
 }
 
 .footer-logo {
@@ -16,6 +37,10 @@
 }
 
 .address-list {
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
   &__item:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -43,8 +68,16 @@
 }
 
 .socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
   width: 206px;
-  margin-left: 70px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    align-items: flex-start;
+  }
+
   &__titel {
     margin-bottom: 20px;
     font-weight: 700;
@@ -80,8 +113,14 @@
 
 .footer-form {
   position: relative;
-  width: 570px;
-  margin-left: 93px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1200px) {
+    width: 570px;
+    margin-left: 93px;
+    align-items: flex-start;
+  }
   &__titel {
     margin-bottom: 20px;
     display: block;
@@ -91,16 +130,28 @@
     line-height: 1.14;
     text-transform: uppercase;
   }
+  &__email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .email-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding-left: 16px;
   background-color: #2f303a;
   color: rgba(255, 255, 255, 0.6);
+  // @media screen and (max-width: 768px) {
+  //   width: 100%;
+  // }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
   &::placeholder {
     font-weight: 400;
     font-size: 16px;
@@ -114,10 +165,6 @@
 }
 
 .form-button-send {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-left: 12px;
   padding: 0;
   border: none;
   display: flex;
@@ -128,6 +175,12 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    margin-left: 12px;
+  }
   &__text {
     font-weight: 700;
     font-size: 16px;
