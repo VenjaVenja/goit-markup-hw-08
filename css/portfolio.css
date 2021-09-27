@@ -410,6 +410,14 @@ img {
   color: var(--titel-text-color);
 }
 
+.mob-menu-link:hover, .mob-menu-link:focus {
+  color: var(--accent-color);
+}
+
+.mob-menu-link.current {
+  color: var(--accent-color);
+}
+
 .mob-contacts-list {
   margin-bottom: 64px;
 }
@@ -612,6 +620,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   padding: 63px 24px;
   font-size: 18px;
   line-height: calc(28 / 18);
