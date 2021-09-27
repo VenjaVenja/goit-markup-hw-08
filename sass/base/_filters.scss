@@ -1,8 +1,19 @@
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
   list-style: none;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  margin-bottom: 30px;
+  }
+   @media screen and (min-width: 1200px) {
+    justify-content: center;
+  margin-bottom: 50px;
+  }
+  & .item{
+    margin-bottom: 10px;
+  }
   & .item:not(:last-child) {
     margin-right: 8px;
   }

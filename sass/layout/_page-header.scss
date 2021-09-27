@@ -6,13 +6,20 @@
     justify-content: space-between;
     padding-top: 16px;
     padding-bottom: 16px;
+    @media screen and (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   }
 }
 
 .site-nav {
   display: none;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
+    margin-left: 88px;
+  }
+  @media screen and (min-width: 1200px) {
     margin-left: 93px;
   }
   &__item {
@@ -55,21 +62,35 @@
 
 .auth-nav {
   display: none;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: column;
     margin-left: auto;
   }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
   &__item + &__item {
-    margin-left: 50px;
+    @media screen and (min-width: 1200px) {
+     margin-left: 50px;
+  }
+}
+&__item:not(:last-child){
+    @media screen and (min-width: 768px) {
+     margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
   }
   &__link {
     display: inline-flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--primary-text-color);
@@ -77,6 +98,12 @@
     &:focus {
       color: var(--accent-color);
     }
+    @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
   }
   &__icon {
     fill: currentColor;
@@ -100,6 +127,9 @@
   &__icon {
     transition: fill var(--time-duration) var(--time-function);
   }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .mob-menu {
@@ -108,11 +138,10 @@
   width: 100vw;
   top: 0;
   height: 100vh;
-  // z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
-  .mob-container {
+  .container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -185,6 +214,9 @@
 
 .mob-social-list {
   display: flex;
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
 }
 
 .mob-social-item {
