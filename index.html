@@ -192,7 +192,14 @@
           <ul class="team-list">
               <li class="team-list__item">
                   <article class="team-list__card">
-                      <img src="./images/igor.jpg" width="270" alt="Игорь Демьяненко" />
+                    <picture>
+                      <source srcset="./images/igor-dt-1x-min.jpg 1x, ./images/igor-dt-2x-min.jpg 2x" media="min-width: 1200px">
+                      <source srcset="./images/igor-tab-1x-min.jpg 1x, ./images/igor-tab-2x-min.jpg 2x" media="min-width: 768px">
+                      <source srcset="./images/igor-mob-1x-min.jpg 1x, ./images/igor-mob-2x-min.jpg 2x" media="min-width: 320px">
+                      
+                      <img src="./images/igor-mob-1x-min.jpg" alt="Игорь Демьяненко" />
+                    </picture>
+                      <!-- <img src="./images/igor.jpg" width="270" alt="Игорь Демьяненко" /> -->
                     <div class="teammate">
                       <h3 class="teammate__titel">Игорь Демьяненко</h3>
                       <p lang="en" class="teammate__text">Product Designer</p>
