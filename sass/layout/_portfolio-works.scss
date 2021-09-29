@@ -69,6 +69,9 @@
     overflow: auto;
     transform: translateY(100%);
     transition: transform var(--time-duration) var(--time-function);
+    @media screen and (min-width: 768px) {
+      height: auto;
+    }
     .example:hover &,
     .example:focus & {
       transform: translateY(0%);

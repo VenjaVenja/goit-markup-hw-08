@@ -632,6 +632,12 @@ img {
   transition: transform var(--time-duration) var(--time-function);
 }
 
+@media screen and (min-width: 768px) {
+  .overlay__text {
+    height: auto;
+  }
+}
+
 .example:hover .overlay__text,
 .example:focus .overlay__text {
   transform: translateY(0%);
