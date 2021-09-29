@@ -105,6 +105,12 @@ img {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .filter-list .item {
+    margin-bottom: 0;
+  }
+}
+
 .filter-list .item:not(:last-child) {
   margin-right: 8px;
 }
@@ -732,13 +738,14 @@ img {
   font-size: 28px;
   line-height: calc(33 / 28);
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 1200px) {
   .section-titel {
     font-size: 36px;
     line-height: calc(42 / 36);
+    margin-bottom: 50px;
   }
 }
 
@@ -807,7 +814,7 @@ img {
 }
 
 .hero__titel {
-  width: 100%;
+  max-width: 360px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -821,7 +828,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .hero__titel {
-    width: 700px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.5;
   }
